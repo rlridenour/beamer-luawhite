@@ -19,6 +19,9 @@
 % Fonts
 % ====================
 
+\usepackage{luatextra}
+\defaultfontfeatures{Ligatures=TeX}
+
 \usefonttheme{professionalfonts}
 
 % \newfontfamily\Raleway[Ligatures=TeX]{Raleway}
@@ -36,13 +39,20 @@
 
 \usefonttheme{serif}
 \setmainfont{Helvetica Neue}
+\usepackage[scaled=1.1]{newtxsf}
 
-
-
-\usepackage{unicode-math}
-\usepackage{firamath-otf}
-\setmathfont[version=sans]{Fira Math}
-% \usepackage{cabin} 
+\AtBeginDocument{%
+  \DeclareMathSymbol{0}{\mathalpha}{operators}{`0}%
+  \DeclareMathSymbol{1}{\mathalpha}{operators}{`1}%
+  \DeclareMathSymbol{2}{\mathalpha}{operators}{`2}%
+  \DeclareMathSymbol{3}{\mathalpha}{operators}{`3}%
+  \DeclareMathSymbol{4}{\mathalpha}{operators}{`4}%
+  \DeclareMathSymbol{5}{\mathalpha}{operators}{`5}%
+  \DeclareMathSymbol{6}{\mathalpha}{operators}{`6}%
+  \DeclareMathSymbol{7}{\mathalpha}{operators}{`7}%
+  \DeclareMathSymbol{8}{\mathalpha}{operators}{`8}%
+  \DeclareMathSymbol{9}{\mathalpha}{operators}{`9}%
+}
 
 \setbeamerfont{title page title}{size=\LARGE,series=\bfseries}
 \setbeamerfont{title page subtitle}{size=\large,series=\bfseries}
